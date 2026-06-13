@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-chr-primary: #D97757;
+  --color-chr-secondary: #F4EAE6;
+  --color-chr-dark: #2D2A26;
+  --color-chr-light: #FFFCFA;
+  --color-chr-accent: #6E8E96;
+  
+  --font-serif: 'Lora', serif;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600;700&display=swap');
+
+html, body {
+  background-color: var(--color-chr-light);
+  color: var(--color-chr-dark);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
