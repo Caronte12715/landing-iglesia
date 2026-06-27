@@ -1,45 +1,35 @@
-<script setup>
-const gatherings = [
-  { day: 'Domingos', time: '10:00 AM & 12:30 PM', desc: 'Servicio General y Escuela Dominical para niños.' },
-  { day: 'Miércoles', time: '7:30 PM', desc: 'Estudio Bíblico y Tiempo de Oración.' },
-  { day: 'Viernes', time: '8:00 PM', desc: 'Reunión de Jóvenes (14-25 años).' }
-];
-
-const ministries = [
-  { name: 'Kids', icon: '🎨', desc: 'Un ambiente seguro y divertido donde los niños aprenden valores y fe.' },
-  { name: 'Jóvenes', icon: '🎸', desc: 'Música, comunidad y conversaciones relevantes para la juventud actual.' },
-  { name: 'Grupos Pequeños', icon: '☕', desc: 'Conecta con otras personas durante la semana en casas o cafeterías.' },
-  { name: 'Ayuda Social', icon: '🤝', desc: 'Sirviendo a nuestra ciudad entregando alimentos y amor.' }
-];
-</script>
-
 <template>
-  <section id="reuniones" class="py-24 bg-white relative">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+  <section id="ministerios" class="py-32 bg-chr-secondary relative">
+    <div class="max-w-7xl mx-auto px-6">
       
-      <!-- Horarios -->
-      <div class="bg-chr-secondary p-10 md:p-14 rounded-3xl">
-        <h2 class="font-serif text-3xl md:text-4xl font-bold text-chr-dark mb-8">Nuestras Reuniones</h2>
-        <div class="space-y-8">
-          <div v-for="(gath, index) in gatherings" :key="index" class="border-b border-chr-dark/10 pb-6 last:border-0">
-            <h3 class="text-xl font-bold text-chr-primary mb-1">{{ gath.day }} <span class="text-chr-dark ml-2 text-lg">{{ gath.time }}</span></h3>
-            <p class="text-gray-600">{{ gath.desc }}</p>
-          </div>
-        </div>
+      <div class="text-center mb-24 reveal">
+        <span class="font-sans text-chr-primary tracking-[0.2em] uppercase text-sm mb-4 block">
+          Nuestras Áreas
+        </span>
+        <h2 class="font-serif text-4xl md:text-5xl text-chr-dark font-light">
+          Crece con <span class="italic text-chr-primary">Nosotros</span>
+        </h2>
       </div>
 
-      <!-- Ministerios -->
-      <div id="ministerios">
-        <div class="mb-10">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-chr-dark mb-4">Para Toda la Familia</h2>
-          <p class="text-gray-600 text-lg">Tenemos un lugar especial para cada etapa de la vida. ¡Involúcrate!</p>
-        </div>
-        
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div v-for="(min, index) in ministries" :key="index" class="bg-chr-light p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
-            <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform origin-left">{{ min.icon }}</div>
-            <h3 class="text-xl font-bold text-chr-dark mb-2">{{ min.name }}</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">{{ min.desc }}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div v-for="(min, index) in ministries" :key="index" 
+             class="group relative bg-chr-light p-10 border border-chr-dark/5 hover:border-chr-primary/30 transition-colors duration-700 reveal"
+             :class="`delay-${(index + 1) * 100}`">
+          
+          <!-- Large Roman Numeral Background -->
+          <div class="absolute -top-4 -right-4 font-serif text-8xl text-chr-secondary/80 font-bold pointer-events-none transition-transform duration-700 group-hover:-translate-y-4">
+            {{ min.num }}
+          </div>
+
+          <div class="relative z-10">
+            <h3 class="font-serif text-2xl text-chr-dark mb-4">{{ min.title }}</h3>
+            <p class="font-sans text-chr-dark/70 font-light leading-relaxed mb-8">
+              {{ min.desc }}
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-chr-primary hover:text-chr-dark transition-colors duration-300">
+              Ver detalles
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -47,3 +37,23 @@ const ministries = [
     </div>
   </section>
 </template>
+
+<script setup>
+const ministries = [
+  {
+    num: 'I',
+    title: 'Adoración',
+    desc: 'Únete a un equipo apasionado por guiar a la congregación hacia la presencia de Dios a través de la música y las artes.'
+  },
+  {
+    num: 'II',
+    title: 'Niños & Jóvenes',
+    desc: 'Un espacio seguro y divertido donde la próxima generación puede aprender valores eternos y desarrollar su propia fe.'
+  },
+  {
+    num: 'III',
+    title: 'Obra Social',
+    desc: 'Llevamos esperanza práctica a nuestra ciudad. Participa en nuestros comedores, brigadas y programas comunitarios.'
+  }
+]
+</script>

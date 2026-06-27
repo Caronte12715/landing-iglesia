@@ -1,20 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-chr-primary: #D97757;
-  --color-chr-secondary: #F4EAE6;
-  --color-chr-dark: #2D2A26;
-  --color-chr-light: #FFFCFA;
-  --color-chr-accent: #6E8E96;
+  --color-chr-primary: #D4AF37; /* Divine Gold */
+  --color-chr-secondary: #F9F6F0; /* Alabaster White */
+  --color-chr-dark: #2C2C2C; /* Deep Charcoal */
+  --color-chr-light: #FFFFFF; /* Pure White */
+  --color-chr-accent: #E8DFD0; /* Warm Sand */
   
-  --font-serif: 'Lora', serif;
-  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Lato', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;600;700&display=swap');
-
 html, body {
-  background-color: var(--color-chr-light);
+  background-color: var(--color-chr-secondary);
   color: var(--color-chr-dark);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
@@ -22,4 +21,27 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-500 { transition-delay: 500ms; }
+  
+  .light-ray {
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 100%);
+  }
 }

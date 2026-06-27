@@ -1,58 +1,50 @@
-<script setup>
-</script>
-
 <template>
-  <footer id="nosotros" class="bg-chr-dark text-white pt-24 pb-12">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-center md:text-left">
-      
-      <!-- Brand -->
-      <div class="flex flex-col items-center md:items-start">
-        <a href="#" class="text-3xl font-serif font-bold text-white tracking-tight mb-6">
-          Comunidad<span class="text-chr-primary">.</span>
-        </a>
-        <p class="text-gray-400 font-light text-sm leading-relaxed max-w-xs">
-          Nuestra misión es compartir el amor de Dios de una manera práctica, relevante y profunda. Todos son bienvenidos.
-        </p>
+  <footer class="bg-chr-dark pt-24 pb-12 text-chr-secondary border-t border-chr-primary/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-center md:text-left reveal">
+        
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+            <svg class="w-6 h-6 text-chr-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2v20M7 7h10" stroke-linecap="round"/>
+            </svg>
+            <span class="font-serif text-xl tracking-widest uppercase">
+              Comunidad <span class="text-chr-primary">Luz</span>
+            </span>
+          </div>
+          <p class="font-sans text-chr-secondary/60 font-light leading-relaxed max-w-sm mx-auto md:mx-0">
+            Iluminando nuestra ciudad con esperanza, fe y servicio desinteresado.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-lg text-chr-primary mb-6">Reuniones</h4>
+          <ul class="space-y-4 font-sans text-chr-secondary/80 font-light">
+            <li>Domingos: 9:00 AM & 11:30 AM</li>
+            <li>Miércoles: 7:30 PM (Estudio)</li>
+            <li>Viernes: 8:00 PM (Jóvenes)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-lg text-chr-primary mb-6">Ubicación</h4>
+          <ul class="space-y-4 font-sans text-chr-secondary/80 font-light">
+            <li>123 Avenida de la Paz</li>
+            <li>Sector Central, CP 10000</li>
+            <li class="mt-4"><a href="#" class="text-chr-primary hover:text-chr-light transition-colors">Ver en el mapa</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Ubicación -->
-      <div class="flex flex-col items-center md:items-start">
-        <h4 class="font-bold text-chr-primary text-lg mb-6">Encuéntranos</h4>
-        <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
-          Av. Esperanza 1000<br/>
-          Barrio Renacer<br/>
-          Ciudadela, CP 54321
-        </p>
-        <a href="#" class="text-white border-b border-chr-primary hover:text-chr-primary transition-colors text-sm pb-1">Ver en el Mapa</a>
-      </div>
-
-      <!-- Contacto -->
-      <div class="flex flex-col items-center md:items-start">
-        <h4 class="font-bold text-chr-primary text-lg mb-6">Contacto</h4>
-        <ul class="space-y-3 text-gray-400 font-light text-sm">
-          <li>+1 (555) 777-8888</li>
-          <li>hola@comunidaddefe.com</li>
-          <li class="pt-2">Horario de Oficina:<br/>Mar - Jue, 9AM a 4PM</li>
-        </ul>
-      </div>
-
-      <!-- Redes -->
-      <div class="flex flex-col items-center md:items-start">
-        <h4 class="font-bold text-chr-primary text-lg mb-6">Conéctate</h4>
-        <div class="flex flex-col gap-3 text-gray-400 font-light text-sm">
-          <a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span>►</span> YouTube (Mensajes en vivo)</a>
-          <a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span>📷</span> Instagram</a>
-          <a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span>👍</span> Facebook</a>
+      <div class="border-t border-chr-secondary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 font-sans text-xs text-chr-secondary/40 uppercase tracking-widest">
+        <p>&copy; {{ new Date().getFullYear() }} Comunidad Luz. Todos los derechos reservados.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-chr-primary transition-colors">Instagram</a>
+          <a href="#" class="hover:text-chr-primary transition-colors">YouTube</a>
+          <a href="#" class="hover:text-chr-primary transition-colors">Facebook</a>
         </div>
       </div>
-
-    </div>
-
-    <!-- Bottom -->
-    <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col items-center justify-center text-center">
-      <p class="text-gray-500 text-sm font-light">
-        &copy; 2026 Iglesia Comunidad de Fe. Todos los derechos reservados.
-      </p>
     </div>
   </footer>
 </template>

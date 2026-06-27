@@ -7,8 +7,22 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Comunidad de Fe - Bienvenido a Casa</title>
 	</head>
-	<body class="bg-chr-light text-chr-dark font-sans antialiased selection:bg-chr-primary selection:text-white">
+	<body class="bg-chr-secondary text-chr-dark font-sans antialiased selection:bg-chr-primary selection:text-white">
 		<slot />
+		
+		<script>
+			const revealElements = document.querySelectorAll('.reveal');
+			const revealObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('active');
+						revealObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+			revealElements.forEach(el => revealObserver.observe(el));
+		</script>
 	</body>
 </html>
 
