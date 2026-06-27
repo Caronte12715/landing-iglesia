@@ -1,21 +1,25 @@
 <template>
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-chr-dark">
     <!-- Background Image with Arch Mask -->
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none p-10 mt-20">
-      <div class="w-full max-w-5xl h-[80vh] relative">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none p-4 md:p-10 mt-12 md:mt-20">
+      <div class="w-full h-full max-w-6xl relative">
         <!-- Arch shape clip-path -->
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-40 transition-transform duration-[20s] hover:scale-105" 
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-50 transition-transform duration-[30s] hover:scale-110" 
              style="clip-path: polygon(0% 100%, 100% 100%, 100% 30%, 50% 0%, 0% 30%); border-radius: 50% 50% 0 0 / 20% 20% 0 0;">
         </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-chr-dark via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-chr-dark via-transparent to-chr-dark/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-chr-dark/80 via-transparent to-chr-dark/80"></div>
       </div>
     </div>
 
     <!-- Soft Overlay -->
-    <div class="absolute inset-0 bg-chr-dark/30 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-chr-dark/40 pointer-events-none"></div>
+
+    <!-- Golden Light Effect -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-chr-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <!-- Content -->
-    <div class="relative z-10 text-center max-w-4xl mx-auto px-6 reveal">
+    <div class="relative z-10 text-center max-w-5xl mx-auto px-6 reveal pt-20">
       <span class="block font-sans text-chr-primary tracking-[0.3em] uppercase text-sm mb-6 opacity-90">
         Bienvenido a tu Casa
       </span>

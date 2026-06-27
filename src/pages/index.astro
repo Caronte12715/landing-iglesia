@@ -3,7 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.vue';
 import Hero from '../components/Hero.vue';
 import DailyPsalm from '../components/DailyPsalm.vue';
+import Sermons from '../components/Sermons.vue';
 import Ministries from '../components/Ministries.vue';
+import Events from '../components/Events.vue';
+import Community from '../components/Community.vue';
 import Footer from '../components/Footer.vue';
 ---
 
@@ -12,7 +15,10 @@ import Footer from '../components/Footer.vue';
 	<main>
 		<Hero client:load />
 		<DailyPsalm client:visible />
+		<Sermons client:visible />
+		<Events client:visible />
 		<Ministries client:visible />
+		<Community client:visible />
 	</main>
 	<Footer />
 </Layout>
