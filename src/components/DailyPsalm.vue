@@ -1,6 +1,6 @@
 <template>
   <section class="py-24 relative overflow-hidden bg-chr-dark text-chr-secondary border-y border-chr-primary/20">
-    <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center bg-fixed pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-10 bg-[url('/images/church_hero.png')] bg-cover bg-center bg-fixed pointer-events-none"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-chr-dark/50 to-chr-dark/90 pointer-events-none"></div>
     
     <!-- Light ray effect -->

@@ -23,10 +23,10 @@
         <div class="relative h-[600px] reveal delay-200">
           <!-- Mosaico Collage -->
           <div class="absolute top-0 right-0 w-2/3 h-2/3">
-            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover shadow-2xl" alt="Community gathering" />
+            <img src="/images/community.png" class="w-full h-full object-cover shadow-2xl" alt="Community gathering" />
           </div>
           <div class="absolute bottom-0 left-0 w-2/3 h-2/3 z-10 border-8 border-chr-light">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover shadow-2xl" alt="Volunteering" />
+            <img src="/images/community.png" class="w-full h-full object-cover shadow-2xl" alt="Volunteering" />
           </div>
           
           <!-- Decorative element -->

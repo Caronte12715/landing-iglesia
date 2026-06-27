@@ -1,7 +1,7 @@
 <template>
   <section id="sermones" class="relative py-32 bg-chr-dark overflow-hidden border-y border-chr-primary/20">
     <!-- Parallax Background -->
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center bg-fixed opacity-30"></div>
+    <div class="absolute inset-0 bg-[url('/images/church_hero.png')] bg-cover bg-center bg-fixed opacity-30"></div>
     <div class="absolute inset-0 bg-chr-dark/80 backdrop-blur-sm"></div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -31,7 +31,7 @@
         <div class="relative reveal delay-200">
           <div class="aspect-square max-w-md mx-auto relative group">
             <div class="absolute inset-0 bg-gradient-to-tr from-chr-primary to-transparent opacity-20 rounded-full blur-3xl transition-opacity duration-1000 group-hover:opacity-40"></div>
-            <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1000&auto=format&fit=crop" alt="Sermon Cover" class="w-full h-full object-cover rounded-t-full rounded-b-md shadow-2xl shadow-chr-dark" />
+            <img src="/images/sermon_cover.png" alt="Sermon Cover" class="w-full h-full object-cover rounded-t-full rounded-b-md shadow-2xl shadow-chr-dark" />
             
             <!-- Floating overlay -->
             <div class="absolute -bottom-6 -left-6 bg-chr-secondary p-6 shadow-xl border border-chr-dark/5 max-w-[200px]">
